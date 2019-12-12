@@ -12,6 +12,7 @@ export const useLocalStorage = (key, initialValue) => {
     //useState hook, [get, set];
     const item = window.localStorage.getItem(key);
     //item is equal to window(the browser window in DOM, supports all browsers)
+    
     //getter, getItem only needs a key
     return item ? JSON.parse(item) : initialValue;
     //this line says if item is true(JSON change string to an object)
